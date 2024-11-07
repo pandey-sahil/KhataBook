@@ -1,0 +1,22 @@
+<%- include('./partials/header.ejs') %>
+<div class="logincontainer w-full h-[80%] flex items-center justify-center bg-gray-900">
+	<div class="loginpanel bg-gray-800 border border-gray-700 rounded-2xl py-8 px-12 shadow-lg">
+		<h3 class="text-2xl mb-3 text-white">Passcode Needed</h3>
+		<form
+			autocomplete="off"
+			action="/hisaab/verify/<%=id%>"
+			class="flex flex-col gap-2 items-start"
+			method="post">
+			<input
+				class="block w-full px-3 py-2 bg-gray-700 border border-gray-600 rounded-md text-gray-200 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
+				type="password"
+				placeholder="Passcode"
+				name="passcode" />
+			<input
+				class="block w-full px-4 py-2 bg-blue-500 rounded-md text-white cursor-pointer hover:bg-blue-600 transition duration-200"
+				type="submit"
+				value="View Hisaab" />
+		</form>
+	</div>
+</div>
+<%- include('./partials/footer.ejs') %>

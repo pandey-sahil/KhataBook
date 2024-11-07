@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Khaatabook</title>
+		<link rel="stylesheet" href="/stylesheets/style.css" />
+		<link
+			href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css"
+			rel="stylesheet" />
+		<script src="https://cdn.tailwindcss.com"></script>
+	</head>
+
+	<body class="bg-gray-900 text-gray-200">
+		<div class="navbar bg-gray-800 text-white flex justify-between items-center w-full px-20 py-6 shadow-md">
+			<h3 class="text-xl font-bold text-gray-100">Khaatabook</h3>
+
+			<!-- Error message (hidden by default) -->
+			<div
+				class="error-message hidden absolute top-12 left-1/2 -translate-x-1/2 px-3 py-2 bg-red-600 text-red-200 rounded-md shadow-md">
+				<h3>Some error occurred</h3>
+			</div>
+
+			<% var loggedin = typeof loggedin !== "undefined" ? loggedin : true %>
+			<% if (loggedin) { %>
+				<!-- Navigation Links for logged-in users -->
+				<div class="links flex gap-6 text-gray-300">
+					<a href="/" class="hover:text-white transition duration-200">Home</a>
+					<a href="/hisaab/create" class="hover:text-white transition duration-200">Create New Hisaab</a>
+					<a href="/logout" class="text-red-500 hover:text-red-400 transition duration-200">Logout</a>
+				</div>
+			<% } %>
+		</div>
+	</body>
+</html>
